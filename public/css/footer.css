@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+.footer{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 250px;
+    
+}
+.mainfooter{
+    background: linear-gradient(180deg,rgba(8, 0, 45, 0.5) 100%, rgba(56, 23, 0, 0.9) 0%);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    border-radius:30px 30px 0 0 ;
+    position: relative;
+    bottom: -120px;
+}
+
+.mainWeb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.web{
+    display: flex;
+    align-items: center;
+}
+.web #logo{
+    width: 100px;
+}
+.vl {
+    border-left: 3px solid rgba(255, 234, 202, 0.43);
+    height: 150px;
+    transform: translate(130px);
+    border: none;
+    width: 2px;
+    border-radius: 2px;
+    background-color: #ffc6e9;
+}
+li{
+    list-style-type:none;
+    text-decoration: none;
+    padding:5px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    transition: .3s;
+}
+.link:hover, li:hover{
+    color: rgb(222, 190, 255);
+}
+
+i{
+    padding-right: 5px;
+}
+
+.link{
+    text-decoration: none;
+    color: white; 
+    transition: .3s; 
+}
+.contact, .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+}
+.contact ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact h1, .socials h1{
+    font-family: 'Maven Pro', sans-serif;
+}
+.line{
+    width: 60%;
+    margin: auto;
+    background-color: #ffc6e9;
+    border-radius: 10px;
+    border: none;
+    height: 2px;
+}
+.right{
+    color: white;
+    font-family: 'Maven Pro', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+.right a{
+    color:rgb(222, 190, 255);
+}
+
+.hover-border{
+    text-decoration: none;
+    position: relative;
+}
+.hover-border::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: rgb(203, 151, 255);
+    position: absolute;
+    bottom: -3px;left:50%;
+    border-radius: 2px;
+    transition: .3s;
+}
+.hover-border:hover::after{
+    left: 0%;
+    width: 100%;
+}
+.coll{
+    display: flex;
+    flex-direction:row;
+}
+

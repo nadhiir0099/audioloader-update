@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 0px 0 100px;
+    margin-bottom: 100px;
+}
+#logo{
+    width: 50px;
+}
+.title{
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+    padding-left:5px;
+    color: white;
+    font-size: 40px; 
+}
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#text, .text{
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: white;
+}
+#inp, .linkingINP{
+    width: 70%;
+    margin: 0 0 20px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    border: 3px solid grey;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 700;
+    color: #b8dbff;;
+    transition: .5s;
+    background-color: rgb(30, 30, 30);
+}
+#inp:focus, .linkingINP:focus{
+    outline: none;
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.frontContent{
+    background: linear-gradient(1deg, rgba(128,61,13,0.5) 0%, rgba(29,0,103,.5) 100%);
+    width: 50%;
+    margin: auto;
+    padding: 10px 20px 100px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    box-shadow: 1px 1px 41px rgb(215 151 255 / 49%);
+}
+#bname{
+    width: 300px;
+}
+#logo, .title{
+    cursor:default;
+}
+
+.content {
+    color: white;
+    display: flex;
+    padding-bottom: 60px;
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+}
+.mini-tite{
+    font-size: 40px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.mini-title-2{
+    font-size: 26px;
+    position: relative;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    bottom: 5px;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.3)),url(/css/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+#convert-btn{
+    padding:10px;
+    width: 250px;
+    color: #fff;
+    font-size: 20px;
+    background: linear-gradient(180deg, rgba(128,13,50,.6) 0%, rgba(103,0,0,.6) 100%);
+    border-radius: 20px;
+    transition: .2s;
+    font-weight: 600;
+    border:none;
+    cursor: pointer;
+    font-family: 'Maven Pro', sans-serif;
+}
+#convert-btn:hover{
+    width: 255px;
+    background: linear-gradient(120deg, rgba(128,13,50,0.7) 0%, rgb(103, 0, 0) 100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) ;
+}
+
+.bottom-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.errors{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 12px;
+    background: linear-gradient(180deg, rgba(128,13,50,0.7063200280112045) 0%, rgba(103,0,0,0.8855917366946778) 100%);
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 5px 5px 20px black ;
+}
+
+#error-message{
+    color:rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.success{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: 'Maven Pro', sans-serif;
+}
+  
+#download-btn{
+    padding:10px;
+    margin-top: 30px;
+    width: 250px;
+    color: #fff;
+    font-size: 20px;
+    background: linear-gradient(180deg, rgba(128,13,50,0.7063200280112045) 0%, rgba(103,0,0,0.8855917366946778) 100%);
+    border-radius: 20px;
+    transition: .2s;
+    font-weight: 600;
+    border:none;
+    font-family: 'Maven Pro', sans-serif;
+    transition: .2s;
+    cursor: pointer;
+}
+  
+#download-btn:hover{
+    width: 260px;
+    background: linear-gradient(120deg, rgba(128,13,50,0.7) 0%, rgb(103, 0, 0) 100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) ;
+}
+#back{
+    color: white;
+    text-decoration: none;
+    font-family: 'Maven Pro', sans-serif;
+    background: linear-gradient(153deg, rgb(148 98 146 / 46%) 0%, rgb(255 120 64 / 33%) 100%);
+    border-radius: 0 10px 0 10px;
+    width: 100px;
+    text-align: center;
+    transition: .3s;
+    padding: 5px;
+    margin-top: 15px;
+    font-weight: 800;
+}
+#back:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.379) ;
+    background: linear-gradient(153deg, rgb(148 98 146 / 46%) 0%, rgb(255 120 64 / 33%) 100%);
+}
+
+.port img{
+    width: 200px;
+}
+.port{
+    margin-top:50px;
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#utube{
+    background-image:linear-gradient(to right, rgb(128, 13, 49) 0%, rgb(255, 131, 131) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.webDis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.webDis p{
+    color: #e8f9ff;
+    font-size:20px;
+    letter-spacing: .5px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.webDis p span{
+    background-image:linear-gradient(120deg, rgb(255, 235, 187) 0%, rgb(191, 255, 222) 100%) ;
+    font-size: 22px;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.c1{
+    padding-top: 10px;
+}
+
+
+.vidsflex {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.playlistvidpre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 7px;
+    border: 1px solid #493c6f;
+    color: white;
+    flex-direction: column;
+    background: linear-gradient(1deg, rgba(128,61,13,0.5) 0%, rgba(29,0,103,.5) 100%);
+    flex: 1;
+}
+
+.vidthumbnail {
+    width: 100%;
+}
+
+.maven {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.nomargin {
+    margin: 0;
+}

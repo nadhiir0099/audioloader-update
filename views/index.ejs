@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/responsivity.css">
+    <link rel="stylesheet" href="/css/tabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="shortcut icon" type="image/png" href="/css/img/logo.png">
+    <title>AudioLoader</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <img id="logo" src="/css/img/logo.png" alt="">
+            <h1 class="title">AudioLoader</h1>
+        </div>
+    </header>
+    <div class="content">
+        <p class="mini-tite"><span>Convert </span><span id="utube">YouTube</span> to MP3</p>
+        <p class="mini-title-2"><span>Make your headphones happy!</span></p>
+    </div>
+    <div class="frontContent">
+        <div class="tabBox">
+            <button class="tab-btn active">Single Treatment</button>
+            <button class="tab-btn">PlayList Treatment</button>
+            <div class="line2"></div>
+        </div>
+        <hr>
+        <div class="insideContent">
+            <div class="single" id="video">
+                <form action="/convert-mp3" method="POST" id="form">
+                <label for="inp" class="text" id="text">Insert Your Video Link</label><br>
+                    <input class="linkingINP" type="text" name="videoID" id="inp" placeholder="Video Link">
+                    <button id="convert-btn"><i class="fa-solid fa-arrows-rotate" style="color: #ffffff;"></i> Convert to MP3</button>
+                </form>
+                <div class="bottom-container">
+                    <% if(typeof success != "undefined" && success) { %>
+                        <div class="success">
+                            
+                            <p><%= song_title %></p>
+                            <a href="<%= song_link %>"><button id="download-btn"><i class="fa-solid fa-download" style="color: #ffffff;"></i> DOWNLOAD</button></a>
+                            <a href="https://audioloader.onrender.com/" id="back"><i class="fa-solid fa-house fa-sm" style="color: #ffffff;"></i> Back</a>
+                        </div>
+                    <% } else if(typeof success != "undefined" && !success) { %>
+                        <div class="errors">
+                            <p><%= message %></p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="single" id="playlist">
+                <form action="/convert-playlist?active=playlist" method="POST" id="form2">
+                    <label  for="playlistInput" class="text" id="text2">Insert Your Playlist Link</label>
+                    <br>
+                    <input class="linkingINP" type="text" name="PlaylistID" id="inp2" placeholder="Playlist Link">
+                    <button id="ConvPL-btn"><i class="fa-solid fa-arrows-rotate" style="color: #ffffff;"></i> Convert Playlist</button>
+                </form>
+                <br>
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px;">
+                    <% if(typeof plsuccess != "undefined" && plsuccess && playlist) { %>
+                        <div class="text"><%= playlist.meta.title %></div>
+                        <a><button class="downloadall-btn" id="download-btn" style="margin: 0;"><i class="fa-solid fa-download" style="color: #ffffff;"></i> DOWNLOAD ALL</button></a>
+                        <div class="vidsflex">
+                            <% for(var video of playlist.data) { %>
+                                <div class="playlistvidpre">
+                                    <% if(playlist.thumbnails[video.videoId]) { %>
+                                        <img src="<%= playlist.thumbnails[video.videoId] %>" class="vidthumbnail">
+                                    <% } %>
+                                    <div class="maven text-center"><%= video.title %></div>
+                                    <a class="playlistvidsingledownload" href="<%= playlist.downloadLinks[video.videoId] %>" download=""><button id="download-btn" type="button"><i class="fa-solid fa-download" style="color: #ffffff;"></i> DOWNLOAD</button></a>
+                                </div>
+                            <%  } %>
+                        </div>
+                    <% } else if(typeof plsuccess != "undefined" && !plsuccess) { %>
+                    <div class="errors">
+                        <p><%= message %></p>
+                    </div>
+                <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="port">
+            <img src="/css/img/Ylogo.png" alt="">
+            <div class="webDis">
+                <p>Introducing the latest and greatest website for
+                    all your music needs: <span>AudioLoader!</span><br>
+                    No more worrying about spotty internet connections or pesky ads interrupting your jam sesh
+                    - just convert and go! <br>Start converting those tunes and get ready to rock out
+                    (or, you know, enjoy some smooth jazz).
+                <p class="c1"><span>ANYTIME</span>,<span> ANYWHERE</span>.</p></p>
+            </div>
+        </div>
+    
+
+    <div class="mainfooter">
+        <div class="footer">
+            <div class="web">
+                <div class="mainWeb">
+                    <img id="logo" src="/css/img/logo.png" alt="">
+                    <h1 class="title">AudioLoader</h1>
+                </div>
+
+                <div class="vl"></div>
+                
+            </div>
+            <div class="coll">
+                <div class="contact">
+                    <h1 class="f-title">Contact</h1>
+                    <ul class="org">
+                        <li><i class="fa-solid fa-phone " style="color: #268600;"></i><label class="dis hover-border">+216 93 641 336</label></li>
+                        <li><i class="fa-solid fa-paper-plane " style="color: #ffa115;"></i><a class="link hover-border" href="mailto:nadhirn772@gmail.com">nadhirn772@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <h1 class="f-titles">Socials</h1>
+                    <ul class="org">
+                        <li><i class="fa-brands fa-facebook" style="color: #4388ff;"></i><a class="link hover-border" href="https://www.facebook.com/profile.php?id=100022847250163" target=”_blank”>FaceBook</a></li>
+                        <li><i class="fa-brands fa-instagram" style="color: #96036f;"></i><a  class="link hover-border" href="https://www.instagram.com/nadhiir_009/" target=”_blank”>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="line">
+        <hr class="line1">
+        <div class="right">
+            <p>Copyright © 2023 <a class="hover-border" href="#">AudioLoader</a> | All rights Reserved.</p>
+            <div id="marker"></div>
+            <p><i class="fa-solid fa-code"></i> Developed by <a class="hover-border" href="https://www.facebook.com/profile.php?id=100022847250163" target="_blank">Nadhir Chtioui</a></p>
+        </div>
+    </div>
+    
+<script src="/js/main.js"></script>
+
+</body>
+</html>
